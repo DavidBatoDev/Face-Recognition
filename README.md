@@ -1,0 +1,1 @@
+Developed a program capable of recognizing familiar faces. In the future, I may incorporate it into the creation of an attendance system or as part of a Two-Factor Authentication (2FA) mechanism for my AWS Password Manager application.
