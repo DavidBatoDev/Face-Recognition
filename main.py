@@ -11,7 +11,8 @@ img_background = cv2.imread('Resources/background.png') # read the image
 folder_mode_path = 'Resources/Modes' # path to the folder
 mode_path_list = os.listdir(folder_mode_path) # list of files in the folder
 img_mode_list = [] # list of images
-print(mode_path_list)
+
+
 for path in mode_path_list:
     img = cv2.imread(f'{folder_mode_path}/{path}') # read the image
     img_mode_list.append(img) # append the image to the list
