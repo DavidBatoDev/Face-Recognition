@@ -49,7 +49,7 @@ while True:
         face_distance = face_recognition.face_distance(encode_list_known, encode_face) 
 
         matched_index = np.argmin(face_distance) # find the index of the minimum value in the list
-        
+        print(face_distance[matched_index])
         if matches[matched_index]:
             print('Match Found')
             y1, x2, y2, x1 = face_location # unpack the tuple
