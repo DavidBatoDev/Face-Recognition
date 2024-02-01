@@ -4,8 +4,8 @@ import pickle
 import os
 
 # importing faces images from the folder to the list
-folder_path = 'images' # path to the folder
-faces_path_list = os.listdir(folder_path) # list of files in the folder
+folder_path = 'Images' # path to the folder
+faces_path_list = os.listdir(folder_path) # list of files in the folder, returns a list of strings
 img_list = [] # list of images
 faces_ids = [] # list of ids
 
@@ -26,5 +26,12 @@ def findEncodings(images_list): # function to find the encodings of the images
     return encodeList
 
 print('Encoding Started')
-encodeListKnown = findEncodings(img_list) # list of encodings of the images
+encode_list_known = findEncodings(img_list) # list of encodings of the images
+encode_list_known_with_ids = [encode_list_known, faces_ids] # list of encodings and ids of the images
 print('Encoding Complete')
+
+
+file = open('EncodeFile.p', 'wb') # open the file in write binary mode
+pickle.dump(encode_list_known_with_ids, file) # dump the data to the file
+file.close() # close the file
+print('File Saved')
